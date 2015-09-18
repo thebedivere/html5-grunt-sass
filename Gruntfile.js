@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 		uglify: {
 			all: {
 				files: {
-					'js/**.min.js': ['js/**.js']
+					'js/main.min.js': ['src/js/main.js']
 				},
 				options: {
 					banner: '/*! <%= pkg.name %> - v<%= pkg.version %>\n' +
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			files: ['src/scss/**.scss', 'src/scss/**/**.scss', 'js/**.js',],
-			tasks: ['sass', 'cssmin']
+			tasks: ['sass', 'cssmin', 'uglify']
 		},
 		clean: {
 			main: ['release/<%= pkg.version %>']
@@ -97,7 +97,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-compress');
-	grunt.registerTask('build', ['sass', 'compress', 'clean', 'copy', 'compress']);
+	grunt.registerTask('build', ['sass', 'uglify', 'compress', 'clean', 'copy', 'compress']);
 	grunt.registerTask('default', ['sass', 'watch']);
 
 };

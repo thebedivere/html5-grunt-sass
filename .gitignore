@@ -6,3 +6,4 @@ node_modules
 /style.css.map
 /style.css
 /.sass-cache/
+bower_components

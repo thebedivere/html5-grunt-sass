@@ -1,20 +1,30 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
-        <script src="js/main.js"></script>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<!-- Place favicon.ico in the root directory -->
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<p>Hello world! This is HTML5 Boilerplate.</p>
+		<!--This is our template. -->
+		<!--Data will be inserted in its according place, replacing the brackets.-->
+		<script id="address-template" type="text/x-handlebars-template">
+			<p>You can find me in {{city}}. My address is {{number}} {{street}}.</p>
+		</script>
+
+		<!--Your new content will be displayed in here-->
+		<div class="content-placeholder"></div>
+		<!-- scripts -->
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+		<script src="js/main.min.js"></script>
 		<script type="text/javascript" src="modernizr.min.js"></script>
-    </body>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+	</body>
 </html>
